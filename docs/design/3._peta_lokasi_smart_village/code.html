@@ -1,0 +1,286 @@
+<!DOCTYPE html><html lang="id" style=""><svg class="inline-defs-container" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"></svg><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-error-container": "#93000a", "primary": "#005bbf", "secondary": "#585f67", "text-muted": "#6B7280", "inverse-surface": "#293040", "on-primary-fixed": "#001a41", "tertiary-fixed": "#ffdbcb", "tertiary": "#9e4300", "outline": "#727785", "inverse-primary": "#adc7ff", "outline-variant": "#c1c6d6", "on-tertiary-fixed-variant": "#783100", "tertiary-fixed-dim": "#ffb691", "on-primary-fixed-variant": "#004493", "on-tertiary": "#ffffff", "secondary-fixed-dim": "#c0c7d0", "on-tertiary-fixed": "#341100", "on-secondary": "#ffffff", "icon-placeholder": "#9CA3AF", "on-secondary-fixed-variant": "#40484f", "primary-fixed-dim": "#adc7ff", "primary-container": "#1a73e8", "on-surface-variant": "#414754", "on-error": "#ffffff", "secondary-container": "#dce3ec", "tertiary-container": "#c55500", "on-surface": "#141b2b", "surface-pure": "#FFFFFF", "surface-dim": "#d3daef", "on-primary-container": "#ffffff", "status-error-bg": "#FEE2E2", "surface-container-low": "#f1f3ff", "surface-variant": "#dce2f7", "on-secondary-container": "#5e656d", "inverse-on-surface": "#edf0ff", "on-secondary-fixed": "#151c23", "error-container": "#ffdad6", "secondary-fixed": "#dce3ec", "on-primary": "#ffffff", "surface-input": "#F3F4F6", "background": "#f9f9ff", "surface-container-highest": "#dce2f7", "surface-container": "#e9edff", "status-success-text": "#059669", "error": "#ba1a1a", "surface-subtle": "#F9FAFB", "surface-container-lowest": "#ffffff", "primary-fixed": "#d8e2ff", "surface-container-high": "#e1e8fd", "status-error-text": "#DC2626", "border-subtle": "#E5E7EB", "status-success-bg": "#D1FAE5", "on-background": "#141b2b", "surface-bright": "#f9f9ff", "on-tertiary-container": "#0e0200", "surface": "#f9f9ff", "surface-tint": "#005bc0" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-xl": "2rem", "margin": "1.25rem", "gutter": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-lg": "1.5rem" }, "fontFamily": { "body-sm": ["Inter"], "label-lg": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "headline-sm": ["Inter"], "label-sm": ["Inter"], "headline-md": ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"] }, "fontSize": { "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "500" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.5px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "21px", "fontWeight": "400" }], "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.2px", "fontWeight": "500" }], "headline-md": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.25px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }] } } } };</script></head><body class="bg-surface-pure font-body-md text-on-surface flex flex-col min-h-screen"><main class="flex-1 flex flex-col relative w-full pb-24 bg-surface-pure pt-safe"><div class="flex flex-col w-full relative select-none">
+<!-- Top Floating Controls Area -->
+<div class="px-margin pt-space-xs pb-space-sm flex flex-col gap-space-sm z-30"><!-- Sub-bar Header with Back, Title & GPS Button -->
+<div class="flex items-center justify-between gap-space-sm">
+  <button aria-label="Kembali" class="w-10 h-10 rounded-full bg-surface-pure shadow-sm flex items-center justify-center text-on-surface hover:bg-surface-subtle active:scale-95 transition-all" type="button">
+    <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+  </button>
+  <div class="flex items-center gap-1.5">
+    <span class="material-symbols-outlined text-primary-container text-[20px]" style="font-variation-settings: 'FILL' 1;">near_me</span>
+    <h1 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">Peta Lokasi</h1>
+  </div>
+  <button aria-label="Pusatkan GPS" class="w-10 h-10 rounded-full bg-surface-pure shadow-sm flex items-center justify-center text-primary-container hover:bg-surface-subtle active:scale-95 transition-all" id="btn-recenter" type="button">
+    <span class="material-symbols-outlined text-[20px]">my_location</span>
+  </button>
+</div>
+<!-- Floating Search Bar -->
+<div class="relative w-full shadow-sm rounded-full bg-surface-pure">
+  <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-icon-placeholder">
+    <span class="material-symbols-outlined text-[20px]">search</span>
+  </div>
+  <input class="w-full h-11 pl-10 pr-10 bg-transparent rounded-full text-on-surface placeholder:text-text-muted font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container/20 transition-all" placeholder="Cari faskes atau lokasi..." type="text">
+  <button aria-label="Filter tambahan" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-text-muted hover:text-on-surface active:scale-90 transition-transform" type="button">
+    <span class="material-symbols-outlined text-[18px]">tune</span>
+  </button>
+</div>
+<!-- Category Filter Chips -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5" id="category-pills">
+  <button class="filter-chip active flex-shrink-0 px-4 py-1.5 rounded-full font-label-md text-label-md transition-all shadow-sm bg-primary-container text-on-primary font-medium" data-category="Semua" type="button">
+    Semua
+  </button>
+  <button class="filter-chip flex-shrink-0 px-4 py-1.5 rounded-full font-label-md text-label-md transition-all shadow-sm bg-surface-pure text-text-muted hover:bg-surface-subtle" data-category="RS" type="button">
+    RS
+  </button>
+  <button class="filter-chip flex-shrink-0 px-4 py-1.5 rounded-full font-label-md text-label-md transition-all shadow-sm bg-surface-pure text-text-muted hover:bg-surface-subtle" data-category="Puskesmas" type="button">
+    Puskesmas
+  </button>
+  <button class="filter-chip flex-shrink-0 px-4 py-1.5 rounded-full font-label-md text-label-md transition-all shadow-sm bg-surface-pure text-text-muted hover:bg-surface-subtle" data-category="Klinik" type="button">
+    Klinik
+  </button>
+</div></div>
+<!-- Interactive Map Canvas Container -->
+<div class="relative w-full h-[calc(100vh-250px)] min-h-[460px] overflow-hidden bg-surface-container-low touch-pan-x touch-pan-y" id="map-viewport">
+<!-- Map Base Layer: Architectural Vector Illustration of Roads, River, Green Belts -->
+<svg class="absolute inset-0 w-full h-full object-cover pointer-events-none" preserveAspectRatio="xMidYMid slice" viewBox="0 0 420 680" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!-- Soft grid pattern for cartographic feel -->
+<pattern height="40" id="city-grid" patternUnits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="#E1E8FD" stroke-dasharray="2,2" stroke-width="0.75"></path>
+</pattern>
+<!-- Linear gradient for meandering river -->
+<linearGradient id="river-gradient" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#C5DCFE"></stop>
+<stop offset="100%" stop-color="#D7E6FF"></stop>
+</linearGradient>
+</defs>
+<!-- Land surface -->
+<rect fill="#F1F3FF" height="100%" width="100%"></rect>
+<rect fill="url(#city-grid)" height="100%" opacity="0.8" width="100%"></rect>
+<!-- Village & Administrative Urban Blocks -->
+<path d="M 30,70 L 150,50 L 170,140 L 40,160 Z" fill="#E4EAFE" rx="8"></path>
+<path d="M 190,40 L 360,20 L 380,120 L 210,130 Z" fill="#E9EDFF" rx="8"></path>
+<path d="M 20,240 L 130,220 L 150,330 L 30,350 Z" fill="#E4EAFE" rx="8"></path>
+<path d="M 240,220 L 390,200 L 410,340 L 260,350 Z" fill="#DEE6FD" rx="8"></path>
+<path d="M 30,420 L 170,410 L 180,560 L 40,570 Z" fill="#E9EDFF" rx="8"></path>
+<path d="M 230,420 L 380,410 L 400,590 L 250,600 Z" fill="#E4EAFE" rx="8"></path>
+<!-- Botanical Park Zones -->
+<circle cx="95" cy="285" fill="#D6F5E3" opacity="0.7" r="32"></circle>
+<rect fill="#D6F5E3" height="45" opacity="0.65" rx="12" width="70" x="270" y="80"></rect>
+<path d="M 310,480 C 330,460 380,470 370,520 C 350,550 300,530 310,480 Z" fill="#D6F5E3" opacity="0.7"></path>
+<!-- Meandering River Waterway -->
+<path d="M -20,180 Q 90,200 170,270 T 320,380 T 440,430" fill="none" stroke="url(#river-gradient)" stroke-linecap="round" stroke-width="26"></path>
+<path d="M -20,180 Q 90,200 170,270 T 320,380 T 440,430" fill="none" opacity="0.6" stroke="#FFFFFF" stroke-dasharray="6,8" stroke-width="2"></path>
+<!-- Primary Arterial Roads -->
+<path d="M 200,-20 L 200,700" fill="none" stroke="#FFFFFF" stroke-width="14"></path>
+<path d="M 200,-20 L 200,700" fill="none" stroke="#D1DBF5" stroke-dasharray="8,6" stroke-width="1.5"></path>
+<path d="M -20,380 L 440,360" fill="none" stroke="#FFFFFF" stroke-width="14"></path>
+<path d="M -20,380 L 440,360" fill="none" stroke="#D1DBF5" stroke-dasharray="8,6" stroke-width="1.5"></path>
+<path d="M -20,130 L 440,110" fill="none" stroke="#FFFFFF" stroke-width="10"></path>
+<path d="M -20,530 L 440,550" fill="none" stroke="#FFFFFF" stroke-width="10"></path>
+<path d="M 80,-20 L 110,700" fill="none" stroke="#FFFFFF" stroke-width="8"></path>
+<path d="M 330,-20 L 310,700" fill="none" stroke="#FFFFFF" stroke-width="8"></path>
+<!-- Secondary Connecting Streets -->
+<path d="M 80,130 L 200,240" fill="none" stroke="#FFFFFF" stroke-width="6"></path>
+<path d="M 200,240 L 330,110" fill="none" stroke="#FFFFFF" stroke-width="6"></path>
+<path d="M 110,460 L 200,360" fill="none" stroke="#FFFFFF" stroke-width="6"></path>
+<path d="M 200,360 L 310,480" fill="none" stroke="#FFFFFF" stroke-width="6"></path>
+</svg>
+<!-- Concentric Geofence Pulses & User Location Marker -->
+<div class="absolute left-[48%] top-[52%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center z-10 pointer-events-none" id="user-location-anchor">
+<!-- Expanding Radar Rings -->
+<div class="absolute w-44 h-44 rounded-full bg-primary-container/10 animate-ping" style="animation-duration: 3s;"></div>
+<div class="absolute w-32 h-32 rounded-full bg-primary-container/15 animate-pulse"></div>
+<div class="absolute w-20 h-20 rounded-full bg-primary-container/20"></div>
+<!-- User Position Core Dot -->
+<div class="relative w-5 h-5 rounded-full bg-surface-pure shadow-md flex items-center justify-center">
+<div class="w-3.5 h-3.5 rounded-full bg-primary-container ring-2 ring-surface-pure"></div>
+</div>
+<!-- Compass Heading Cone -->
+<div class="absolute -top-3 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-b-[10px] border-b-primary-container/60 transform rotate-12"></div>
+</div>
+<!-- Location Pin 1: RSUD Kabupaten X (Red Pin) -->
+<div class="pin-marker absolute left-[22%] top-[19%] -translate-x-1/2 -translate-y-full cursor-pointer z-20 transition-transform active:scale-95" data-status="Buka 24 Jam" data-status-class="bg-status-success-bg text-status-success-text" data-time="5 mnt (1.8 km)" data-title="RSUD Kabupaten X" data-type="RS"><div class="flex flex-col items-center group">
+  <!-- Label Tooltip Pill -->
+  <div class="mb-1 px-2.5 py-1 rounded-full bg-surface-pure shadow-md border border-border-subtle/50 flex items-center gap-1.5 whitespace-nowrap">
+    <span class="w-2 h-2 rounded-full bg-error"></span>
+    <span class="font-label-sm text-label-sm text-on-surface font-semibold">RSUD Kabupaten X</span>
+  </div>
+  <!-- Modern SVG Pin Marker -->
+  <div class="relative flex items-center justify-center filter drop-shadow-md">
+    <svg class="w-9 h-11 text-error fill-current" fill="none" viewBox="0 0 36 44">
+      <path d="M18 0C8.06 0 0 8.06 0 18C0 31.5 18 44 18 44C18 44 36 31.5 36 18C36 8.06 27.94 0 18 0Z"></path>
+      <circle cx="18" cy="18" fill="#FFFFFF" r="11"></circle>
+      <path d="M16 10H20V16H26V20H20V26H16V20H10V16H16V10Z" fill="#DC2626"></path>
+    </svg>
+  </div>
+</div></div>
+<!-- Location Pin 2: Puskesmas Sukamaju (Green Pin) -->
+<div class="pin-marker absolute left-[74%] top-[25%] -translate-x-1/2 -translate-y-full cursor-pointer z-20 transition-transform active:scale-95" data-status="Buka s/d 16:00" data-status-class="bg-status-success-bg text-status-success-text" data-time="8 mnt (2.4 km)" data-title="Puskesmas Sukamaju" data-type="Puskesmas"><div class="flex flex-col items-center group">
+  <!-- Label Tooltip Pill -->
+  <div class="mb-1 px-2.5 py-1 rounded-full bg-surface-pure shadow-md border border-border-subtle/50 flex items-center gap-1.5 whitespace-nowrap">
+    <span class="w-2 h-2 rounded-full bg-status-success-text"></span>
+    <span class="font-label-sm text-label-sm text-on-surface font-semibold">Puskesmas Sukamaju</span>
+  </div>
+  <!-- Modern SVG Pin Marker -->
+  <div class="relative flex items-center justify-center filter drop-shadow-md">
+    <svg class="w-9 h-11 text-status-success-text fill-current" fill="none" viewBox="0 0 36 44">
+      <path d="M18 0C8.06 0 0 8.06 0 18C0 31.5 18 44 18 44C18 44 36 31.5 36 18C36 8.06 27.94 0 18 0Z"></path>
+      <circle cx="18" cy="18" fill="#FFFFFF" r="11"></circle>
+      <path d="M16 10H20V16H26V20H20V26H16V20H10V16H16V10Z" fill="#059669"></path>
+    </svg>
+  </div>
+</div></div>
+<!-- Location Pin 3: Klinik Sehat Mandiri (Blue Pin) -->
+<div class="pin-marker absolute left-[28%] top-[68%] -translate-x-1/2 -translate-y-full cursor-pointer z-20 transition-transform active:scale-95" data-status="Buka s/d 21:00" data-status-class="bg-status-success-bg text-status-success-text" data-time="3 mnt (850 m)" data-title="Klinik Sehat Mandiri" data-type="Klinik"><div class="flex flex-col items-center group">
+  <!-- Label Tooltip Pill -->
+  <div class="mb-1 px-2.5 py-1 rounded-full bg-surface-pure shadow-md border border-border-subtle/50 flex items-center gap-1.5 whitespace-nowrap">
+    <span class="w-2 h-2 rounded-full bg-primary-container"></span>
+    <span class="font-label-sm text-label-sm text-on-surface font-semibold">Klinik Sehat Mandiri</span>
+  </div>
+  <!-- Modern SVG Pin Marker -->
+  <div class="relative flex items-center justify-center filter drop-shadow-md">
+    <svg class="w-9 h-11 text-primary-container fill-current" fill="none" viewBox="0 0 36 44">
+      <path d="M18 0C8.06 0 0 8.06 0 18C0 31.5 18 44 18 44C18 44 36 31.5 36 18C36 8.06 27.94 0 18 0Z"></path>
+      <circle cx="18" cy="18" fill="#FFFFFF" r="11"></circle>
+      <path d="M16 10H20V16H26V20H20V26H16V20H10V16H16V10Z" fill="#1A73E8"></path>
+    </svg>
+  </div>
+</div></div>
+<!-- Location Pin 4: RS Harapan Bunda (Red Pin) -->
+<div class="pin-marker absolute left-[78%] top-[72%] -translate-x-1/2 -translate-y-full cursor-pointer z-20 transition-transform active:scale-95" data-status="IGD Siaga 24 Jam" data-status-class="bg-status-error-bg text-status-error-text" data-time="12 mnt (4.2 km)" data-title="RS Harapan Bunda" data-type="RS"><div class="flex flex-col items-center group">
+  <!-- Label Tooltip Pill -->
+  <div class="mb-1 px-2.5 py-1 rounded-full bg-surface-pure shadow-md border border-border-subtle/50 flex items-center gap-1.5 whitespace-nowrap">
+    <span class="w-2 h-2 rounded-full bg-error"></span>
+    <span class="font-label-sm text-label-sm text-on-surface font-semibold">RS Harapan Bunda</span>
+  </div>
+  <!-- Modern SVG Pin Marker -->
+  <div class="relative flex items-center justify-center filter drop-shadow-md">
+    <svg class="w-9 h-11 text-error fill-current" fill="none" viewBox="0 0 36 44">
+      <path d="M18 0C8.06 0 0 8.06 0 18C0 31.5 18 44 18 44C18 44 36 31.5 36 18C36 8.06 27.94 0 18 0Z"></path>
+      <circle cx="18" cy="18" fill="#FFFFFF" r="11"></circle>
+      <path d="M16 10H20V16H26V20H20V26H16V20H10V16H16V10Z" fill="#DC2626"></path>
+    </svg>
+  </div>
+</div></div>
+<!-- Floating Map Controls on Bottom Right -->
+<div class="absolute right-4 bottom-24 flex flex-col gap-2.5 z-20">
+<!-- Compass Button -->
+<button aria-label="Arah Kompas" class="w-11 h-11 rounded-full bg-surface-pure shadow-md flex items-center justify-center text-text-muted hover:text-on-surface active:scale-90 transition-transform" id="compass-btn" type="button">
+<span class="material-symbols-outlined text-[22px] text-tertiary">explore</span>
+</button>
+<!-- Map Layer Switcher Button -->
+<button aria-label="Lapisan Peta" class="w-11 h-11 rounded-full bg-surface-pure shadow-md flex items-center justify-center text-text-muted hover:text-on-surface active:scale-90 transition-transform" id="layers-btn" type="button">
+<span class="material-symbols-outlined text-[22px] text-primary-container">layers</span>
+</button>
+<!-- Quick Geofence Radius Toggle -->
+<button aria-label="Jangkauan Radius" class="w-11 h-11 rounded-full bg-surface-pure shadow-md flex items-center justify-center text-text-muted hover:text-on-surface active:scale-90 transition-transform" type="button">
+<span class="material-symbols-outlined text-[22px]">radar</span>
+</button>
+</div>
+<!-- Floating Facility Quick Preview Sheet (Interactive Drawer Card) -->
+<div class="absolute bottom-3 inset-x-margin bg-surface-pure rounded-2xl shadow-lg p-space-md z-30 transition-all duration-300 transform translate-y-0" id="facility-sheet"><div class="flex items-start justify-between gap-space-sm">
+  <div class="flex items-start gap-space-sm min-w-0 flex-1">
+    <div class="w-12 h-12 rounded-xl bg-surface-container-high flex-shrink-0 flex items-center justify-center overflow-hidden shadow-sm">
+      <img alt="RSUD Kabupaten X" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhvAL4PemBkCbBkWzMLDcZAf7k9X5mep3SInKQI-bJoreVvJ8CvKcYydvR2VmjvNK_6zyS8jmySL8BE-owwHK4NB9HM0pcQmYAiRn4FHuMIw6BdeCN29TWAZMfsL9jKi7VrkidA0OM8E9NUmOuLo1cySp9QWsBq0SjrBvutk8kpve0nYEA94gfMXxk9MImWennF2flSPKxs0x_M7grLmcmiw0hdq5vpFz1wmfe9vw">
+    </div>
+    <div class="flex flex-col min-w-0 flex-1">
+      <div class="flex items-center justify-between gap-1">
+        <h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate" id="sheet-title">RSUD Kabupaten X</h2>
+      </div>
+      <p class="font-body-sm text-body-sm text-text-muted mt-0.5 truncate" id="sheet-desc">Jl. Kesehatan No. 42 • <span class="text-primary-container font-medium" id="sheet-time">5 mnt (1.8 km)</span></p>
+      <div class="flex items-center gap-2 mt-1.5">
+        <span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm font-medium bg-status-success-bg text-status-success-text" id="sheet-status">Buka 24 Jam</span>
+        <span class="flex items-center text-tertiary font-label-sm text-label-sm font-semibold">
+          <span class="material-symbols-outlined text-[14px] mr-0.5 text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span> 4.8
+        </span>
+      </div>
+    </div>
+  </div>
+  <button aria-label="Tutup pratinjau" class="text-text-muted hover:text-on-surface p-1 rounded-full active:scale-95 transition-transform flex-shrink-0" id="close-sheet" type="button">
+    <span class="material-symbols-outlined text-[18px]">close</span>
+  </button>
+</div>
+<div class="flex items-center gap-2.5 mt-3 pt-2.5 border-t border-border-subtle/50">
+  <a class="flex-1 h-11 rounded-full bg-primary-container text-on-primary flex items-center justify-center gap-2 font-label-lg text-label-lg font-medium shadow-sm hover:opacity-95 active:scale-98 transition-all" href="#">
+    <span class="material-symbols-outlined text-[20px]">navigation</span>
+    <span class="">Rute Cepat</span>
+  </a>
+  <button aria-label="Telepon Darurat" class="w-11 h-11 rounded-full bg-surface-container-low text-primary-container flex items-center justify-center hover:bg-surface-container active:scale-95 transition-all shadow-sm" type="button">
+    <span class="material-symbols-outlined text-[20px]">call</span>
+  </button>
+  <button aria-label="Bagikan Lokasi" class="w-11 h-11 rounded-full bg-surface-container-low text-secondary flex items-center justify-center hover:bg-surface-container active:scale-95 transition-all shadow-sm" type="button">
+    <span class="material-symbols-outlined text-[20px]">share</span>
+  </button>
+</div></div>
+</div>
+</div>
+<script>
+  // Filter chips selection handler
+  const filterChips = document.querySelectorAll('.filter-chip');
+  const markers = document.querySelectorAll('.pin-marker');
+
+  filterChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      filterChips.forEach(c => {
+        c.classList.remove('bg-primary-container', 'text-on-primary', 'font-medium');
+        c.classList.add('bg-surface-pure', 'text-text-muted');
+      });
+      chip.classList.add('bg-primary-container', 'text-on-primary', 'font-medium');
+      chip.classList.remove('bg-surface-pure', 'text-text-muted');
+
+      const selectedCategory = chip.getAttribute('data-category');
+      markers.forEach(marker => {
+        const markerType = marker.getAttribute('data-type');
+        if (selectedCategory === 'Semua' || markerType === selectedCategory) {
+          marker.style.display = 'block';
+        } else {
+          marker.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Location pin click interaction updating bottom preview card
+  const sheet = document.getElementById('facility-sheet');
+  const sheetTitle = document.getElementById('sheet-title');
+  const sheetTime = document.getElementById('sheet-time');
+  const sheetStatus = document.getElementById('sheet-status');
+  const closeSheet = document.getElementById('close-sheet');
+
+  markers.forEach(marker => {
+    marker.addEventListener('click', () => {
+      const title = marker.getAttribute('data-title');
+      const time = marker.getAttribute('data-time');
+      const status = marker.getAttribute('data-status');
+      const statusClass = marker.getAttribute('data-status-class');
+
+      sheetTitle.textContent = title;
+      sheetTime.textContent = time;
+      sheetStatus.textContent = status;
+      sheetStatus.className = 'px-2 py-0.5 rounded-full font-label-sm text-label-sm font-medium ' + statusClass;
+
+      sheet.classList.remove('translate-y-32', 'opacity-0', 'pointer-events-none');
+      sheet.classList.add('translate-y-0', 'opacity-100');
+    });
+  });
+
+  closeSheet.addEventListener('click', () => {
+    sheet.classList.add('translate-y-32', 'opacity-0', 'pointer-events-none');
+    sheet.classList.remove('translate-y-0', 'opacity-100');
+  });
+
+  // Re-center pulse effect trigger
+  const btnRecenter = document.getElementById('btn-recenter');
+  const userAnchor = document.getElementById('user-location-anchor');
+
+  btnRecenter.addEventListener('click', () => {
+    userAnchor.classList.add('scale-125');
+    setTimeout(() => {
+      userAnchor.classList.remove('scale-125');
+    }, 400);
+  });
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-pure/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(17,24,39,0.04)]" data-active-classes="text-primary-container font-semibold"><div class="flex justify-around items-center h-16 px-gutter"><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-text-muted hover:text-on-surface transition-colors" data-path="beranda" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-sm text-label-sm">Beranda</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] transition-colors text-primary-container font-semibold" data-path="peta-faskes" href="#"><span class="material-symbols-outlined text-[24px]">location_on</span><span class="font-label-sm text-label-sm">Peta</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-text-muted hover:text-on-surface transition-colors" data-path="fasilitas-favorit" href="#"><span class="material-symbols-outlined text-[24px]">favorite</span><span class="font-label-sm text-label-sm">Favorit</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-text-muted hover:text-on-surface transition-colors" data-path="profil-warga" href="#"><span class="material-symbols-outlined text-[24px]">person</span><span class="font-label-sm text-label-sm">Profil</span></a></div></nav>
+
+</body></html>
